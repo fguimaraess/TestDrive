@@ -3,10 +3,12 @@ C:\Projetos\TestDrive\TestDrive\TestDrive\bin\Debug\netstandard2.0\TestDrive.dll
 C:\Projetos\TestDrive\TestDrive\TestDrive\bin\Debug\netstandard2.0\TestDrive.pdb
 C:\Projetos\TestDrive\TestDrive\TestDrive\obj\Debug\netstandard2.0\TestDrive.csprojAssemblyReference.cache
 C:\Projetos\TestDrive\TestDrive\TestDrive\obj\Debug\netstandard2.0\App.xaml.g.cs
-C:\Projetos\TestDrive\TestDrive\TestDrive\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
 C:\Projetos\TestDrive\TestDrive\TestDrive\obj\Debug\netstandard2.0\TestDrive.csproj.CoreCompileInputs.cache
 C:\Projetos\TestDrive\TestDrive\TestDrive\obj\Debug\netstandard2.0\TestDrive.AssemblyInfoInputs.cache
 C:\Projetos\TestDrive\TestDrive\TestDrive\obj\Debug\netstandard2.0\TestDrive.AssemblyInfo.cs
 C:\Projetos\TestDrive\TestDrive\TestDrive\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Projetos\TestDrive\TestDrive\TestDrive\obj\Debug\netstandard2.0\TestDrive.dll
 C:\Projetos\TestDrive\TestDrive\TestDrive\obj\Debug\netstandard2.0\TestDrive.pdb
+C:\Projetos\TestDrive\TestDrive\TestDrive\obj\Debug\netstandard2.0\Views\AgendamentoView.xaml.g.cs
+C:\Projetos\TestDrive\TestDrive\TestDrive\obj\Debug\netstandard2.0\Views\DetalheView.xaml.g.cs
+C:\Projetos\TestDrive\TestDrive\TestDrive\obj\Debug\netstandard2.0\Views\ListagemView.xaml.g.cs
