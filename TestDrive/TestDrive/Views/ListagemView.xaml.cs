@@ -13,16 +13,31 @@ namespace TestDrive.Views
 {
     public partial class ListagemView : ContentPage
     {
+        public ListagemViewModel ViewModel { get; set; }
 
         public ListagemView()
         {
             InitializeComponent();
+            this.ViewModel = new ListagemViewModel();
+            this.BindingContext = this.ViewModel;
         }
 
-        private void listViewVeiculos_ItemTapped(object sender, ItemTappedEventArgs e)
+        protected async override void OnAppearing()
         {
-            var veiculo = (Veiculo)e.Item;
-            Navigation.PushAsync(new DetalheView(veiculo));
+            base.OnAppearing();
+            MessagingCenter.Subscribe<Veiculo>(this, "VeiculoSelecionado",
+                (veiculoSelecionado) =>
+                {
+                    Navigation.PushAsync(new DetalheView(veiculoSelecionado));
+                });
+
+            await this.ViewModel.GetVeiculos();
+        }
+
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+            MessagingCenter.Unsubscribe<Veiculo>(this, "VeiculoSelecionado");
         }
     }
 }

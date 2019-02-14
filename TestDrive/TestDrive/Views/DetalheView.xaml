@@ -16,11 +16,11 @@
                 </TableSection>
             </TableRoot>
         </TableView>
-        
+
         <Button x:Name="buttonProximo" Text="Próximo" 
-            Clicked="buttonProximo_Clicked"
+            Command="{Binding ProximoCommand}"
             VerticalOptions="End"></Button>
     </StackLayout>
 
-    
+
 </ContentPage>

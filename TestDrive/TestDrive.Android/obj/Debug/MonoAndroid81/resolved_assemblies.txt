@@ -3,8 +3,12 @@ C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\androi
 C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\Java.Interop.dll
 C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\Mono.Android.dll
 C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\mscorlib.dll
+C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\Newtonsoft.Json.dll
 C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\System.Core.dll
 C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\System.dll
+C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\System.Net.Http.dll
+C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\System.Net.Http.Extensions.dll
+C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\System.Net.Http.Primitives.dll
 C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\System.Xml.dll
 C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\System.Xml.Linq.dll
 C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\TestDrive.dll
@@ -46,10 +50,8 @@ C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\androi
 C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\System.Runtime.InteropServices.dll
 C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\System.Runtime.Extensions.dll
 C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\System.Reflection.Extensions.dll
-C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\System.Net.Http.dll
 C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\System.Runtime.Serialization.dll
 C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\System.ServiceModel.Internals.dll
-C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\Mono.Security.dll
 C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\netstandard.dll
 C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\System.Data.dll
 C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\System.Numerics.dll
@@ -64,3 +66,5 @@ C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\androi
 C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\System.Security.SecureString.dll
 C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\System.Web.Services.dll
 C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\System.Xml.XPath.XDocument.dll
+C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\Mono.Security.dll
+C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\System.Net.Primitives.dll
