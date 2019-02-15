@@ -5,21 +5,27 @@
              Title="TestDrive"
              x:Class="TestDrive.Views.ListagemView">
 
-    <ListView x:Name="listViewVeiculos" ItemsSource="{Binding Veiculos}" Margin="25"
+    <StackLayout Margin="25">
+        <ActivityIndicator IsRunning="{Binding Aguarde}"
+                           IsVisible="{Binding Aguarde}">
+            
+        </ActivityIndicator>
+        <ListView x:Name="listViewVeiculos" ItemsSource="{Binding Veiculos}"
               SelectedItem="{Binding VeiculoSelecionado}">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <ViewCell>
-                    <ViewCell.View>
-                        <StackLayout Orientation="Horizontal">
-                            <Label Text="{Binding Nome}" FontSize="20" VerticalTextAlignment="Center"></Label>
-                            <Label Text=" - " VerticalTextAlignment="Center"></Label>
-                            <Label Text="{Binding PrecoFormatado}" FontAttributes="Bold" VerticalTextAlignment="Center"></Label>
-                        </StackLayout>
-                    </ViewCell.View>
-                </ViewCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Nome}" FontSize="20" VerticalTextAlignment="Center"></Label>
+                                <Label Text=" - " VerticalTextAlignment="Center"></Label>
+                                <Label Text="{Binding PrecoFormatado}" FontAttributes="Bold" VerticalTextAlignment="Center"></Label>
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
 
 </ContentPage>

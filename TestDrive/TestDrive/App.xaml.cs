@@ -12,7 +12,7 @@ namespace TestDrive
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new ListagemView());
+            MainPage = new LoginView();
         }
 
         protected override void OnStart()

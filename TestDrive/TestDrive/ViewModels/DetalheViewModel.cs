@@ -9,7 +9,7 @@ using Xamarin.Forms;
 
 namespace TestDrive.ViewModels
 {
-    public class DetalheViewModel : INotifyPropertyChanged
+    public class DetalheViewModel : BaseViewModel
     {
         public Veiculo Veiculo { get; set; }
         public string TextoFreioAbs { get { return string.Format("Freio Abs - R$ {0}", Veiculo.FreioAbs); } }
@@ -64,13 +64,6 @@ namespace TestDrive.ViewModels
             {
                 MessagingCenter.Send(Veiculo, "ProximoCommand");
             });
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        public void OnPropertyChanged([CallerMemberName]string name = "")
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
 
         public ICommand ProximoCommand { get; set; }
