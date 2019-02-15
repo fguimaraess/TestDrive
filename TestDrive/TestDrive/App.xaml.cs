@@ -1,4 +1,5 @@
 ﻿using System;
+using TestDrive.Models;
 using TestDrive.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -17,7 +18,11 @@ namespace TestDrive
 
         protected override void OnStart()
         {
-            // Handle when your app starts
+            MessagingCenter.Subscribe<Usuario>(this, "SucessoLogin",
+              (usuario) =>
+              {
+                  MainPage = new NavigationPage(new ListagemView());
+              });
         }
 
         protected override void OnSleep()

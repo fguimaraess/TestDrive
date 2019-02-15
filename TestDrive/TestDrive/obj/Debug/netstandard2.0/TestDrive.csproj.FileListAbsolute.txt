@@ -12,3 +12,4 @@ C:\Projetos\TestDrive\TestDrive\TestDrive\obj\Debug\netstandard2.0\Views\Agendam
 C:\Projetos\TestDrive\TestDrive\TestDrive\obj\Debug\netstandard2.0\Views\DetalheView.xaml.g.cs
 C:\Projetos\TestDrive\TestDrive\TestDrive\obj\Debug\netstandard2.0\Views\ListagemView.xaml.g.cs
 C:\Projetos\TestDrive\TestDrive\TestDrive\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Projetos\TestDrive\TestDrive\TestDrive\obj\Debug\netstandard2.0\Views\LoginView.xaml.g.cs
