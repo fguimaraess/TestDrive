@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestDrive.Views.MasterView"
+             Title="Perfil">
+    <TabbedPage.Children>
+        <ContentPage Title="Usuário">
+            <Frame OutlineColor="Silver"
+           Margin="15"
+           VerticalOptions="CenterAndExpand">
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                    <Label Text="{Binding Nome}"></Label>
+                    <BoxView Color="Gray" HeightRequest="1" HorizontalOptions="Fill"></BoxView>
+                    <Label Text="{Binding Email}"></Label>
+                    <BoxView Color="Gray" HeightRequest="1" HorizontalOptions="Fill"></BoxView>
+
+                    <Button Text="Perfil" Command="{Binding EditarPerfilCommand}"></Button>
+                </StackLayout>
+            </Frame>
+        </ContentPage>
+
+        <!-- SEGUNDA ABA - EDITAR -->
+        <ContentPage Title="Editar">
+            <Frame OutlineColor="Silver"
+                   VerticalOptions="CenterAndExpand"
+                   Margin="15">
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                    <TableView>
+                        <TableRoot>
+                            <TableSection Title="Dados Pessoais">
+                                <EntryCell Placeholder="Nome" Text="{Binding Nome}"></EntryCell>
+                                <EntryCell Placeholder="Data de Nascimento" Text="{Binding DataNascimento}"></EntryCell>
+                                <EntryCell Placeholder="Telefone" Text="{Binding Telefone}"></EntryCell>
+                                <EntryCell Placeholder="E-mail" Text="{Binding Email}"></EntryCell>
+                            </TableSection>
+                        </TableRoot>
+                    </TableView>
+                    <Button Text="Salvar" Command="{Binding SalvarPerfilCommand}"></Button>
+                </StackLayout>
+            </Frame>
+        </ContentPage>
+    </TabbedPage.Children>
+</TabbedPage>
