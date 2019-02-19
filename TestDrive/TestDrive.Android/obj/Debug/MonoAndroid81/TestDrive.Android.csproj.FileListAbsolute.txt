@@ -29,6 +29,9 @@ C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\res\mi
 C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\res\mipmap-xxhdpi\launcher_foreground.png
 C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\res\mipmap-xxxhdpi\icon.png
 C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\res\mipmap-xxxhdpi\launcher_foreground.png
+C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\res\drawable\aluracar.png
+C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\res\drawable\icon.png
+C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\res\drawable\perfil.png
 C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\R.cs.flag
 C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\R.txt
 C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\uploadflags.txt
@@ -102,9 +105,7 @@ C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\androi
 C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\TestDrive.Android.pdb
 C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Forms.Core.pdb
 C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Forms.Xaml.pdb
-C:\Projetos\TestDrive\TestDrive\TestDrive\bin\Debug\netstandard2.0\TestDrive.dll
 C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\linksrc\TestDrive.Android.pdb
-C:\Projetos\TestDrive\TestDrive\TestDrive.Android\bin\Debug\TestDrive.dll.mdb
 C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\linksrc\FormsViewGroup.dll.mdb
 C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\linksrc\TestDrive.dll.mdb
 C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\linksrc\Xamarin.Forms.Platform.Android.dll.mdb
