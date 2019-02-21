@@ -14,10 +14,10 @@ namespace TestDrive.Views
     public partial class AgendamentoView : ContentPage
     {
         public AgendamentoViewModel ViewModel { get; set; }
-        public AgendamentoView(Veiculo veiculo)
+        public AgendamentoView(Veiculo veiculo, Usuario usuario)
         {
             InitializeComponent();
-            this.ViewModel = new AgendamentoViewModel(veiculo);
+            this.ViewModel = new AgendamentoViewModel(veiculo, usuario);
             this.BindingContext = this.ViewModel;
         }
 
@@ -53,14 +53,16 @@ namespace TestDrive.Views
                 });
 
             MessagingCenter.Subscribe<Agendamento>(this, "SucessoAgendamento",
-                (res) =>
+                async (res) =>
                 {
-                    DisplayAlert("Agendamento", "Agendamento salvo com sucesso!", "OK");
+                    await DisplayAlert("Agendamento", "Agendamento salvo com sucesso!", "OK");
+                    await Navigation.PopToRootAsync();
                 });
             MessagingCenter.Subscribe<ArgumentException>(this, "ErroAgendamento",
-                (res) =>
+                async (res) =>
                 {
-                    DisplayAlert("Agendamento", "Falha ao agendar o test drive! Verifique os dados e tente novamente mais tarde!", "OK");
+                    await DisplayAlert("Agendamento", "Falha ao agendar o test drive! Verifique os dados e tente novamente mais tarde!", "OK");
+                    await Navigation.PopToRootAsync();
                 });
         }
 

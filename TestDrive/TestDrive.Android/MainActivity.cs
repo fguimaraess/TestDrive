@@ -25,7 +25,7 @@ namespace TestDrive.Droid
         public void TirarFoto()
         {
             Intent intent = new Intent(MediaStore.ActionImageCapture);
-            
+
             arquivoImagem = PegarArquivoImagem();
 
             intent.PutExtra(MediaStore.ExtraOutput,
@@ -50,6 +50,9 @@ namespace TestDrive.Droid
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
+            StrictMode.SetVmPolicy(builder.Build());
+
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
@@ -62,7 +65,17 @@ namespace TestDrive.Droid
         {
             base.OnActivityResult(requestCode, resultCode, data);
 
-            MessagingCenter.Send(arquivoImagem, "TirarFoto");
+            if (resultCode == Result.Ok)
+            {
+                var bytes = new byte[arquivoImagem.Length()];
+                using (var stream = new Java.IO.FileInputStream(arquivoImagem))
+                {
+                    stream.Read(bytes);
+                }
+                
+               
+                MessagingCenter.Send<byte[]>(bytes, "FotoTirada");
+            }
         }
     }
 }

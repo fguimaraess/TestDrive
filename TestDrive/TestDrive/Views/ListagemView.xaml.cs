@@ -14,11 +14,13 @@ namespace TestDrive.Views
     public partial class ListagemView : ContentPage
     {
         public ListagemViewModel ViewModel { get; set; }
+        readonly Usuario usuario;
 
-        public ListagemView()
+        public ListagemView(Usuario usuario)
         {
             InitializeComponent();
             this.ViewModel = new ListagemViewModel();
+            this.usuario = usuario;
             this.BindingContext = this.ViewModel;
         }
 
@@ -28,7 +30,7 @@ namespace TestDrive.Views
             MessagingCenter.Subscribe<Veiculo>(this, "VeiculoSelecionado",
                 (veiculoSelecionado) =>
                 {
-                    Navigation.PushAsync(new DetalheView(veiculoSelecionado));
+                    Navigation.PushAsync(new DetalheView(veiculoSelecionado, usuario));
                 });
 
             await this.ViewModel.GetVeiculos();

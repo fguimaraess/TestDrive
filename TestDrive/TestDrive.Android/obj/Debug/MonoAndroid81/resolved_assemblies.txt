@@ -4,6 +4,12 @@ C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\androi
 C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\Mono.Android.dll
 C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\mscorlib.dll
 C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\Newtonsoft.Json.dll
+C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\SQLite-net.dll
+C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\SQLitePCLRaw.batteries_green.dll
+C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\SQLitePCLRaw.batteries_v2.dll
+C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\SQLitePCLRaw.core.dll
+C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\SQLitePCLRaw.lib.e_sqlite3.dll
+C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\SQLitePCLRaw.provider.e_sqlite3.dll
 C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\System.Core.dll
 C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\System.dll
 C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\System.Net.Http.dll
@@ -66,5 +72,7 @@ C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\androi
 C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\System.Security.SecureString.dll
 C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\System.Web.Services.dll
 C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\System.Xml.XPath.XDocument.dll
+C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\System.Threading.Tasks.dll
+C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\System.Globalization.dll
 C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\Mono.Security.dll
 C:\Projetos\TestDrive\TestDrive\TestDrive.Android\obj\Debug\MonoAndroid81\android\assets\System.Net.Primitives.dll

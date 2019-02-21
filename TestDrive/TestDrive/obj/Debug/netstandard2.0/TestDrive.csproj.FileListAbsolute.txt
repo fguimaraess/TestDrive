@@ -11,7 +11,7 @@ C:\Projetos\TestDrive\TestDrive\TestDrive\obj\Debug\netstandard2.0\TestDrive.pdb
 C:\Projetos\TestDrive\TestDrive\TestDrive\obj\Debug\netstandard2.0\Views\AgendamentoView.xaml.g.cs
 C:\Projetos\TestDrive\TestDrive\TestDrive\obj\Debug\netstandard2.0\Views\DetalheView.xaml.g.cs
 C:\Projetos\TestDrive\TestDrive\TestDrive\obj\Debug\netstandard2.0\Views\ListagemView.xaml.g.cs
-C:\Projetos\TestDrive\TestDrive\TestDrive\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Projetos\TestDrive\TestDrive\TestDrive\obj\Debug\netstandard2.0\Views\LoginView.xaml.g.cs
 C:\Projetos\TestDrive\TestDrive\TestDrive\obj\Debug\netstandard2.0\Views\MasterDetailView.xaml.g.cs
 C:\Projetos\TestDrive\TestDrive\TestDrive\obj\Debug\netstandard2.0\Views\MasterView.xaml.g.cs
+C:\Projetos\TestDrive\TestDrive\TestDrive\obj\Debug\netstandard2.0\XamlC.stamp

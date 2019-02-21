@@ -5,19 +5,34 @@ using TestDrive.Models;
 using Xamarin.Forms;
 using Newtonsoft.Json;
 using System.Text;
+using TestDrive.Data;
 
 namespace TestDrive.ViewModels
 {
     public class AgendamentoViewModel : BaseViewModel
     {
         public Agendamento Agendamento { get; set; }
-        public Veiculo Veiculo { get { return Agendamento.Veiculo; } set { Agendamento.Veiculo = value; } }
+
+        private string modelo;
+        public string  Modelo
+        {
+            get { return this.Agendamento.Modelo; }
+            set { this.Agendamento.Modelo = value; }
+        }
+
+        private decimal preco;
+        public decimal Preco
+        {
+            get { return this.Agendamento.Preco; }
+            set { this.Agendamento.Preco = value; }
+        }
+
         public string Nome
         {
             get { return Agendamento.Nome; }
             set
             {
-                Agendamento.Nome = value;
+                this.Agendamento.Nome = value;
                 OnPropertyChanged();
                 ((Command)AgendarCommand).ChangeCanExecute();
             }
@@ -48,10 +63,10 @@ namespace TestDrive.ViewModels
 
         public ICommand AgendarCommand { get; set; }
 
-        public AgendamentoViewModel(Veiculo veiculo)
+        public AgendamentoViewModel(Veiculo veiculo, Usuario usuario)
         {
-            this.Agendamento = new Agendamento();
-            this.Agendamento.Veiculo = veiculo;
+            this.Agendamento = new Agendamento(usuario.Nome, usuario.Telefone, usuario.Email, veiculo.Nome, veiculo.Preco);
+            
             AgendarCommand = new Command(() =>
             {
                 MessagingCenter.Send(this.Agendamento, "Agendamento");
@@ -76,13 +91,16 @@ namespace TestDrive.ViewModels
                 nome = Nome,
                 fone = Telefone,
                 email = Email,
-                carro = Veiculo.Nome,
-                preco = Veiculo.Preco,
+                carro = Modelo,
+                preco = Preco,
                 dataAgendamento = DataAgendamento
             });
             var conteudo = new StringContent(json, Encoding.UTF8, "application/json");
 
             var resposta = await cliente.PostAsync(URL_TO_POST, conteudo);
+
+            SalvarAgendamentoDB();
+
             if (resposta.IsSuccessStatusCode)
             {
                 MessagingCenter.Send(Agendamento, "SucessoAgendamento");
@@ -90,6 +108,15 @@ namespace TestDrive.ViewModels
             else
             {
                 MessagingCenter.Send(new ArgumentException(), "ErroAgendamento");
+            }
+        }
+
+        private void SalvarAgendamentoDB()
+        {
+            using (var conexao = DependencyService.Get<ISqLite>().PegarConexao())
+            {
+                AgendamentoDAO dao = new AgendamentoDAO(conexao);
+                dao.Salvar(new Agendamento(Nome, Telefone, Email, Modelo, Preco));
             }
         }
     }
