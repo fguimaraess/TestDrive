@@ -62,12 +62,25 @@ namespace TestDrive.ViewModels
         public ICommand SalvarCommand { get; private set; }
         public ICommand EditarCommand { get; private set; }
         public ICommand TirarFotoCommand { get; private set; }
+        public ICommand MeusAgendamentosCommand { get; private set; }
+        public ICommand NovoAgendamentoCommand { get; private set; }
 
         private readonly Usuario usuario;
         public MasterViewModel(Usuario usuario)
         {
             this.usuario = usuario;
             DefinirComandos(usuario);
+            AssinarMensagens();
+        }
+
+        private void AssinarMensagens()
+        {
+            MessagingCenter.Subscribe<byte[]>(this, "FotoTirada",
+                            (bytesFoto) =>
+                            {
+                                FotoPerfil = ImageSource.FromStream(
+                                    () => new MemoryStream(bytesFoto));
+                            });
         }
 
         private void DefinirComandos(Usuario usuario)
@@ -93,12 +106,16 @@ namespace TestDrive.ViewModels
                 DependencyService.Get<ICamera>().TirarFoto();
             });
 
-            MessagingCenter.Subscribe<byte[]>(this, "FotoTirada",
-                (bytesFoto) =>
-                {
-                    FotoPerfil = ImageSource.FromStream(
-                        () => new MemoryStream(bytesFoto));
-                });
+            MeusAgendamentosCommand = new Command(() =>
+            {
+                MessagingCenter.Send<Usuario>(usuario, "MeusAgendamentos");
+            });
+
+            NovoAgendamentoCommand = new Command(() => 
+            {
+                MessagingCenter.Send<Usuario>(usuario, "NovoAgendamento");
+            });
+
         }
     }
 }

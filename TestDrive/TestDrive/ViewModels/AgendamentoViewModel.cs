@@ -6,6 +6,7 @@ using Xamarin.Forms;
 using Newtonsoft.Json;
 using System.Text;
 using TestDrive.Data;
+using TestDrive.Services;
 
 namespace TestDrive.ViewModels
 {
@@ -59,7 +60,6 @@ namespace TestDrive.ViewModels
         }
         public DateTime DataAgendamento { get { return Agendamento.DataAgendamento; } set { Agendamento.DataAgendamento = value; } }
         public TimeSpan HoraAgendamento { get { return Agendamento.HoraAgendamento; } set { Agendamento.HoraAgendamento = value; } }
-        const string URL_TO_POST = "https://aluracar.herokuapp.com/salvaragendamento";
 
         public ICommand AgendarCommand { get; set; }
 
@@ -80,44 +80,11 @@ namespace TestDrive.ViewModels
 
         public async void SalvarAgendamento()
         {
-            var cliente = new HttpClient();
-
-            var dataHoraAgendamento =
-                new DateTime(DataAgendamento.Year, DataAgendamento.Month, DataAgendamento.Day,
-                HoraAgendamento.Hours, HoraAgendamento.Minutes, HoraAgendamento.Seconds);
-
-            var json = JsonConvert.SerializeObject(new
-            {
-                nome = Nome,
-                fone = Telefone,
-                email = Email,
-                carro = Modelo,
-                preco = Preco,
-                dataAgendamento = DataAgendamento
-            });
-            var conteudo = new StringContent(json, Encoding.UTF8, "application/json");
-
-            var resposta = await cliente.PostAsync(URL_TO_POST, conteudo);
-
-            SalvarAgendamentoDB();
-
-            if (resposta.IsSuccessStatusCode)
-            {
-                MessagingCenter.Send(Agendamento, "SucessoAgendamento");
-            }
-            else
-            {
-                MessagingCenter.Send(new ArgumentException(), "ErroAgendamento");
-            }
+            AgendamentoService agendamentoService = new AgendamentoService();
+            await agendamentoService.EnviarAgendamento(this.Agendamento);
         }
 
-        private void SalvarAgendamentoDB()
-        {
-            using (var conexao = DependencyService.Get<ISqLite>().PegarConexao())
-            {
-                AgendamentoDAO dao = new AgendamentoDAO(conexao);
-                dao.Salvar(new Agendamento(Nome, Telefone, Email, Modelo, Preco));
-            }
-        }
     }
+
+    
 }

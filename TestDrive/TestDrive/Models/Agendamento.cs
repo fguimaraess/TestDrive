@@ -16,6 +16,12 @@ namespace TestDrive.Models
         public string Email { get; set; }
         public string Modelo { get; set; }
         public decimal Preco { get; set; }
+        public bool Confirmado { get; set; }
+        public string DataFormatada { get
+            {
+                return DataAgendamento.Add(HoraAgendamento).ToString("dd/MM/yyyy HH:mm");
+            }
+        }
 
         DateTime dataAgendamento = DateTime.Today;
         public DateTime DataAgendamento
@@ -28,6 +34,17 @@ namespace TestDrive.Models
         }
         public TimeSpan HoraAgendamento { get; set; }
 
+        public Agendamento(string nome, string fone, string email, string modelo, decimal preco, DateTime dataAgendamento, TimeSpan horaAgendamento)
+        {
+            this.Nome = nome;
+            this.Telefone = fone;
+            this.Email = email;
+            this.Modelo = modelo;
+            this.Preco = preco;
+            this.DataAgendamento = dataAgendamento;
+            this.HoraAgendamento = horaAgendamento;
+        }
+
         public Agendamento(string nome, string fone, string email, string modelo, decimal preco)
         {
             this.Nome = nome;
@@ -35,6 +52,11 @@ namespace TestDrive.Models
             this.Email = email;
             this.Modelo = modelo;
             this.Preco = preco;
+        }
+
+        public Agendamento()
+        {
+
         }
     }
 }
